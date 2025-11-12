@@ -122,10 +122,9 @@
 
     <script>
         // Constants for the City of Brooks Tax Calculation
-        const EXAMPLE_ASSESSMENT = 513000;
-        const EXAMPLE_TAX = 5900;
-        // Calculated Mill Rate (Tax / Assessment)
-        const MILL_RATE = EXAMPLE_TAX / EXAMPLE_ASSESSMENT; // ~0.011501
+        // Mill Rate provided by user: 10.961423 (per $1000 of assessed value)
+        // Converted to per-dollar rate for calculation: 10.961423 / 1000
+        const MILL_RATE = 0.010961423; 
 
         // Primary Tax Breakdown (of Total Tax Bill)
         const PRIMARY_BREAKDOWN = [
@@ -134,7 +133,7 @@
             { name: "Newell Foundation", percentage: 0.01, color: '#f44336' }
         ];
 
-        // RESTORED Original Departmental Breakdown (of the MUNICIPAL PORTION ONLY - 77% of total tax)
+        // Original Departmental Breakdown (of the MUNICIPAL PORTION ONLY - 77% of total tax)
         const DEPARTMENT_BREAKDOWN = [
             { name: "Policing", cents: 21.0 },
             { name: "Recreation", cents: 17.2 },
